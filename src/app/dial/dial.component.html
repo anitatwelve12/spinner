@@ -1,0 +1,19 @@
+<div class="progress">
+	<svg class="progress__svg" width="380" height="380" viewBox="0 0 120 120">
+		<circle class="prime-stroke-value-enable" [style.strokeDasharray]="primeCircumference" [style.strokeDashoffset]="primeDashoffset" cx="60" cy="60"
+         [attr.r]="primeRadius" stroke-width="10" />
+         
+         <circle class="collection-stroke-value-enable" [style.strokeDasharray]="collectionCircumference" [style.strokeDashoffset]="collectionDashoffset" cx="60" cy="60"
+         [attr.r]="collectionRadius" stroke-width="10"/>
+
+         <circle class="return-stroke-value-enable" [style.strokeDasharray]="returnCircumference" [style.strokeDashoffset]="returnDashoffset" cx="60" cy="60"
+         [attr.r]="returnRadius" stroke-width="10"/>
+	</svg>
+
+  <!-- <div class="progress__value-text">{{primeValue}}%</div> -->
+</div>
+<div>
+    <a href="#" class="btn">
+        <i class="fa fa-home"></i>
+    </a>
+</div>

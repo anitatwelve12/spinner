@@ -1,0 +1,326 @@
+.progress {
+  position: fixed;
+}
+
+.progress__value-text {
+  position: absolute;
+  top: 48px;
+  left: 45px;
+  font-size: 20px;
+}
+
+
+
+.progress__value1-text {
+  position: absolute;
+  top: 48px;
+  left: 45px;
+  font-size: 20px;
+}
+.progress__svg {
+  transform: rotate(-90deg);
+
+}
+
+.progress__value1 {
+  translate: rotate(-90deg);
+ 
+}
+.progress__meter,
+.progress__value,.progress__value1 ,.progress__value3 {
+  fill: none;
+}
+
+.progress__meter {
+  stroke: #ccc;
+}
+
+.progress__value {
+  stroke: #4CAF50;
+  transition: all 100ms;
+ 
+}
+
+.progress__value1 {
+  stroke: #000000;
+  transition: all 100ms;
+ 
+}
+
+.progress__value3 {
+  stroke: #000000;
+  transition: all 100ms;
+  transform-origin:50% 50%;
+  transform: rotate(20deg)
+}
+
+
+// .progress {
+//     position: relative;
+//   }
+  
+//   .progress__value-text {
+//     position: absolute;
+//     top: 129px;
+//     left: 143px;
+//     font-size: 20px;
+//   }
+  
+//   .progress__svg {
+//     transform: rotate(-90deg);
+//   }
+  
+//   .progress__meter,
+//   .progress__meter1,
+//   .progress__value,.progress__value1 {
+//     fill: none;
+//   }
+
+//   .progress__value1 {
+//     fill: none;
+//   }
+  
+//   .progress__meter {
+//     stroke: #ccc;
+//   }
+  
+//   .progress__meter1 {
+//     stroke: #ccc;
+//   }
+
+//   .progress__value {
+//     stroke: #4CAF50;
+//     transition: all 100ms;
+    
+//   }
+
+//   .progress__value1 {
+//     stroke: #4CAF50;
+//     transition: all 100ms;
+//     transform-origin:50% 50%;
+//     transform: rotate(-40deg)
+    
+//   }
+
+
+// .progress {
+
+//   position: fixed;
+
+// }
+
+ 
+
+// .progress__value-text {
+
+//   position: absolute;
+
+//   top: 129px;
+
+//   left: 133px;
+
+//   font-size: 35px;
+
+//   color: #086A87
+
+// }
+
+// .progress__value-text-color {
+
+//   color: white;
+
+// }
+
+ 
+
+// .progress__value-text1 {
+
+//   position: absolute;
+
+//   top: 177px;
+
+//   left: 144px;
+
+//   font-size: 22px;
+
+// }
+
+ 
+
+// .progress__svg {
+
+//   transform: rotate(-90deg);
+
+//   position: absolute;
+
+// }
+
+ 
+
+// .progress__svg1 {
+
+//   //transform: rotate(-70deg);
+
+//   position: fixed;
+
+// }
+
+ 
+
+// .progress__meter,
+
+// .progress__meter1,
+
+// .progress__meter2,
+
+// .progress__value {
+
+//   fill: none;
+
+// }
+
+ 
+
+// .progress__value_color {
+
+//   fill: #088A08;
+
+// }
+
+ 
+
+// .progress__value1 {
+
+//   fill: none;
+
+// }
+
+ 
+
+// .progress__value2 {
+
+//   fill: none;
+
+// }
+
+ 
+
+// .progress__value4 {
+
+//   fill: none;
+
+// }
+
+ 
+
+// .progress__value2 {
+
+//   fill: #F0F0F0;
+
+//   transition: all 100ms;
+
+// }
+
+ 
+
+// .progress__value3 {
+
+//   fill: #088A08;
+
+//   transition: all 100ms;
+
+// }
+
+ 
+
+// .progress__meter {
+
+//   stroke: #F0F0F0;
+
+// }
+
+ 
+
+// .progress__meter1 {
+
+//   stroke: #F0F0F0;
+
+// }
+
+ 
+
+// .progress__value {
+
+//   stroke: #0040FF;
+
+//   transition: all 100ms;
+
+// }
+
+ 
+
+// .progress__value4 {
+
+//   stroke: #58ACFA;
+
+//   transition: all 100ms;
+
+// }
+
+ 
+
+// .progress__value1 {
+
+//   stroke: #01A9DB;
+
+//   transition: all 100ms;
+//  // transform-origin: 50% 50% ;
+//  transform: rotate(-70deg);
+
+// }
+
+ 
+
+// .rinsback-color {
+
+//   stroke: #04B45F;
+
+//   transition: all 100ms;
+
+// }
+
+ 
+
+.main-spinner-box-size {
+
+  width: 320px;
+
+  height: 500px;
+
+  padding: 50px;
+
+  border: 1px solid red;
+
+  position: relative;
+
+  //text-align: center;
+
+}
+
+ 
+
+.main-bar-chart-box-size {
+
+  width: 315px;
+
+  height: 75px;
+
+  padding: 50px;
+
+  border: 1px solid darkcyan;
+
+  position: absolute;
+
+  margin: 334px -48px;
+
+}

@@ -1,0 +1,166 @@
+<!-- <div class="progress">
+	<svg class="progress__svg" width="320" height="320" viewBox="0 0 120 120">
+		<circle class="progress__meter" cx="60" cy="60" [attr.r]="radius" stroke-width="12" />
+		<circle class="progress__value" [style.strokeDasharray]="circumference" [style.strokeDashoffset]="dashoffset" cx="60" cy="60"
+         [attr.r]="radius" stroke-width="12" />
+         
+         <circle class="progress__meter1" cx="60" cy="60" [attr.r]="radius1" stroke-width="12" />
+         <circle class="progress__value1" [style.strokeDasharray]="circumference1" [style.strokeDashoffset]="dashoffset1" cx="60" cy="60"
+          [attr.r]="radius1" stroke-width="12" />
+	</svg>
+
+  <div class="progress__value-text">{{updatedvalue}}%</div>
+</div> -->
+
+<!-- <svg [style.width]="width" [style.height]="height" viewBox="0 0 120 120"  class="progress__svg">
+
+    <circle [attr.r]="radius" cx="60" cy="60" stroke-width="12" class="progress__meter" [ngClass]="storke ? 'progress__meter' : 'progress__meter1' "/>
+
+    <circle [style.strokeDasharray]="circumference" [style.strokeDashoffset]="dashoffset" [attr.r]="radius" cx="60" cy="60" stroke-width="12"  [ngClass]="storke ? 'progress__value' : 'progress__value1'"/>
+
+</svg> -->
+
+<!-- class="progress__svg" -->
+
+<!-- [ngClass]="storke ? 'progress__svg' : 'progress__svg1' " -->
+
+<!-- [ngClass]="value > 100 ? 'progress__svg' : 'progress__svg1'" -->
+
+//sapna changes 
+
+<!-- <div class="main-spinner-box-size">
+  <div class="progress">
+      <svg class="progress__svg" width="320" height="320" viewBox="0 0 120 120">
+          <circle class="progress__value" [style.strokeDasharray]="outerCircleCircumference" [style.strokeDashoffset]="outerCircleDashoffset" cx="60" cy="60"
+            [attr.r]="outerCircleRadius" stroke-width="10" [ngClass]="returnValue >= 100 ? 'progress__value_color && rinsback-color' : 'progress__value'"/>
+      </svg>
+      <svg class="progress__svg1" width="320" height="320" viewBox="0 0 120 120">
+        <circle class="progress__value4" [style.strokeDasharray]="secondOuterCircleCircumference" [style.strokeDashoffset]="secondOuterCircleDashoffset" cx="60" cy="60"
+            [attr.r]="secondOuterCircleRadius" stroke-width="10" [ngClass]="returnValue >= 100 ? 'rinsback-color' : 'progress__value4'"/>
+      </svg>
+      <svg class="progress__svg" width="320" height="320" viewBox="0 0 120 120">
+        <circle class="progress__meter1" cx="60" cy="60" [attr.r]="37" stroke-width="10" />
+        <circle class="progress__value1" [style.strokeDasharray]="innerCircleiCircumference" [style.strokeDashoffset]="innerCircleDashoffset" cx="60" cy="60"
+        [attr.r]="innerCircleRadius" stroke-width="10" [ngClass]="returnValue >= 100 ? 'rinsback-color' : 'progress__value1'"/>
+      </svg>
+      <svg class="progress__svg" width="320" height="320" viewBox="0 0 120 120">
+        <circle class="progress__meter2" cx="60" cy="60" [attr.r]="30" stroke-width="12" />
+        <circle class="progress__value2" [style.strokeDasharray]="innerMostCircleCircumference" [style.strokeDashoffset]="innerMostCircleDashoffset" cx="60" cy="60"
+        [attr.r]="innerMostCircleRadius" stroke-width="12" [ngClass]="returnValue >= 100 ? 'progress__value3' : 'progress__value2'"/>
+      </svg>
+      <div class="progress__value-text" [ngClass]="returnValue >= 100 ? 'progress__value-text-color' : 'progress__value-text'">{{value}}</div>
+      <div class="progress__value-text1">{{880}}</div>
+    </div>
+    <div class="main-bar-chart-box-size"></div>
+</div> -->
+
+ 
+
+//Gaurav modification changes
+
+
+<div class="main-spinner-box-size">
+
+    <div class="progress">
+
+        <svg class="progress__svg" width="320" height="320" viewBox="0 0 120 120">
+
+            <circle class="progress__value" [style.strokeDasharray]="circumference" [style.strokeDashoffset]="dashoffset" cx="60" cy="60"
+              [attr.r]="radius" stroke-width="10" [ngClass]="{s1:true,'progress__value':true} "/>
+              
+              <circle class="progress__value1" [style.strokeDasharray]="circumference1" [style.strokeDashoffset]="dashoffset1" cx="60" cy="60"
+              [attr.r]="radius1" stroke-width="10"/>
+
+             <circle class="progress__value3" [style.strokeDasharray]="circumference3" [style.strokeDashoffset]="dashoffset3" cx="60" cy="60"
+              [attr.r]="radius3" stroke-width="10" [style.transform] ="m" />
+             
+            <!--  <circle class="progress__value2" [style.strokeDasharray]="circumference2" [style.strokeDashoffset]="dashoffset2" cx="60" cy="60"
+              [attr.r]="30" stroke-width="12" [ngClass]="returnValue >= 100 ? 'progress__value3' : 'progress__value2'"/> 
+            -->
+        </svg>
+        <div class="progress__value-text" [ngClass]="returnValue >= 100 ? 'progress__value-text-color' : 'progress__value-text'">{{value}}</div>
+
+        <div class="progress__value-text1">{{880}}</div>
+
+      </div>
+
+      <div class="main-bar-chart-box-size"></div>
+
+</div>
+
+
+
+//back up
+<!-- 
+<div class="main-spinner-box-size">
+
+  <div class="progress">
+
+      <svg class="progress__svg" width="320" height="320" viewBox="0 0 120 120">
+
+          <circle class="progress__value" [style.strokeDasharray]="circumference" [style.strokeDashoffset]="dashoffset" cx="60" cy="60"
+            [attr.r]="radius" stroke-width="20" [ngClass]="{s1:true,'progress__value':true} "/>
+            
+            <circle class="progress__value1" [style.strokeDasharray]="circumference1" [style.strokeDashoffset]="dashoffset1" cx="60" cy="60"
+            [attr.r]="radius1" stroke-width="10" [ngClass]="returnValue >= 100 ? 'rinsback-color' : 'progress__value1'"/> -->
+          
+            <!-- <circle class="progress__value4" [style.strokeDasharray]="circumference3" [style.strokeDashoffset]="dashoffset3" cx="60" cy="60"
+            [attr.r]="radius3" stroke-width="10" [ngClass]="returnValue >= 100 ? 'rinsback-color' : 'progress__value4'"/> -->
+<!-- 
+            <circle class="progress__value2" [style.strokeDasharray]="circumference2" [style.strokeDashoffset]="dashoffset2" cx="60" cy="60"
+            [attr.r]="30" stroke-width="12" [ngClass]="returnValue >= 100 ? 'progress__value3' : 'progress__value2'"/>
+      </svg> -->
+<!-- 
+      <svg class="progress__svg1" width="320" height="320" viewBox="0 0 120 120">
+
+        <circle class="progress__value4" [style.strokeDasharray]="circumference3" [style.strokeDashoffset]="dashoffset3" cx="60" cy="60"
+
+            [attr.r]="radius3" stroke-width="10" [ngClass]="returnValue >= 100 ? 'rinsback-color' : 'progress__value4'"/>
+
+      </svg> -->
+
+      <!-- <svg class="progress__svg" width="320" height="320" viewBox="0 0 120 120">
+
+        <circle class="progress__meter1" cx="60" cy="60" [attr.r]="37" stroke-width="10" />
+
+        <circle class="progress__value1" [style.strokeDasharray]="circumference1" [style.strokeDashoffset]="dashoffset1" cx="60" cy="60"
+
+        [attr.r]="radius1" stroke-width="10" [ngClass]="returnValue >= 100 ? 'rinsback-color' : 'progress__value1'"/>
+
+      </svg> -->
+
+      <!-- <svg class="progress__svg" width="320" height="320" viewBox="0 0 120 120">
+
+        <circle class="progress__meter2" cx="60" cy="60" [attr.r]="30" stroke-width="12" />
+
+        <circle class="progress__value2" [style.strokeDasharray]="circumference2" [style.strokeDashoffset]="dashoffset2" cx="60" cy="60"
+
+        [attr.r]="30" stroke-width="12" [ngClass]="returnValue >= 100 ? 'progress__value3' : 'progress__value2'"/>
+
+      </svg> -->
+
+   
+
+      <!-- <div class="progress__value-text" [ngClass]="returnValue >= 100 ? 'progress__value-text-color' : 'progress__value-text'">{{value}}</div>
+
+      <div class="progress__value-text1">{{880}}</div>
+
+    </div>
+
+    <div class="main-bar-chart-box-size"></div> -->
+
+<!-- </div> -->
+
+<!--
+
+<div class="progress">
+
+    <svg class="progress__svg1" width="320" height="320" viewBox="0 0 120 120">
+
+        <circle class="progress__value4" [style.strokeDasharray]="circumference3" [style.strokeDashoffset]="dashoffset3" cx="60" cy="60"
+
+            [attr.r]="radius3" stroke-width="12" />
+
+    </svg>
+
+</div> -->
