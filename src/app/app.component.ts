@@ -21,13 +21,13 @@ export class AppComponent {
     return new Observable<number>(observer => {
       let val = 0;
       const interval = setInterval(() => {
-        if (val < 100) {
+        if (val < 30) {
           val++;
         } else {
           val = 0;
         }
         observer.next(val);
-        if (val === 100) {
+        if (val === 30) {
           observer.unsubscribe();
           this.collectionProgress = this.emulateCollectionProgress();
         }
@@ -54,7 +54,7 @@ export class AppComponent {
           observer.unsubscribe();
           this.returnProgress = this.emulateReturnProgress();
         }
-      }, 30);
+      }, 5);
 
       return () => {
         clearInterval(interval);
