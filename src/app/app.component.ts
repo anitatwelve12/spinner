@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -6,30 +6,53 @@ import { Observable } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+
+export class AppComponent implements OnInit {
   primeProgress: Observable<number>;
   collectionProgress: Observable<number>;
   returnProgress: Observable<number>;
+  salineProgress: Observable<number>;
 
-  ngOnInit() {} 
+  primeValue: number = 30;
+  totalCollection: number = 880;
+  currentValue: number;
+  totalReturn: number = 880;
+  salineReturn = 100;
+
+  collectionVal1: number;
+  temp: number = 0;
+  collectionVal: Array<number> = new Array();
+  returnVal: Array<number> = new Array();
 
   constructor() {
+    for(let i = 0; i <= this.totalCollection; i+=20) {
+      this.collectionVal.push(i);
+      this.returnVal.push(i);
+    }
+    for(let i = 0; i <= this.totalCollection; i+=20) {
+      this.returnVal.push(i);
+    }
     this.primeProgress = this.emulatePrimeProgress();
+  }
+
+  ngOnInit() {
+    this.subscribeData();
   }
 
   emulatePrimeProgress() {
     return new Observable<number>(observer => {
       let val = 0;
       const interval = setInterval(() => {
-        if (val < 30) {
+        if (val < this.primeValue) {
           val++;
         } else {
           val = 0;
         }
         observer.next(val);
-        if (val === 30) {
+        if (val === this.primeValue) {
           observer.unsubscribe();
           this.collectionProgress = this.emulateCollectionProgress();
+          this.returnProgress = this.emulateReturnProgress();
         }
       }, 5);
 
@@ -41,85 +64,98 @@ export class AppComponent {
 
   emulateCollectionProgress() {
     return new Observable<number>(observer => {
-      let val = 0;
       const interval = setInterval(() => {
-        if (val < 880) {
-          val++;
-        } else {
-          val = 0;
-        }
-
-        observer.next(val);
-        if (val === 880) {
+        observer.next(this.currentValue);
+        if (this.currentValue === this.totalCollection) {
           observer.unsubscribe();
-          this.returnProgress = this.emulateReturnProgress();
+          clearInterval(interval);
+          this.salineProgress = this.emulateSalineReturnProgress();
         }
       }, 5);
-
-      return () => {
-        clearInterval(interval);
-      };
     });
   }
 
   emulateReturnProgress() {
     return new Observable<number>(observer => {
+      const interval = setInterval(() => {
+        observer.next(this.currentValue);
+        if (this.currentValue === this.totalReturn) {
+          observer.unsubscribe();
+          clearInterval(interval);
+          this.salineProgress = this.emulateSalineReturnProgress();
+        }
+      }, 5);
+    });
+  }
+
+  // emulateReturnProgress() {
+  //   return new Observable<number>(observer => {
+  //     let val = 0;
+  //     const interval = setInterval(() => {
+  //       if (val < this.totalReturn) {
+  //         val++;
+  //       } else {
+  //         val = 0;
+  //       }
+  //       observer.next(val);
+  //       if (val === this.totalReturn) {
+  //         observer.unsubscribe();
+  //       }
+  //     }, 50);
+  //     return () => {
+  //       clearInterval(interval);
+  //     };
+  //   });
+  // }
+
+  emulateSalineReturnProgress() {
+    return new Observable<number>(observer => {
       let val = 0;
       const interval = setInterval(() => {
-        if (val < 100) {
+        if (val < this.salineReturn) {
           val++;
         } else {
           val = 0;
         }
-
         observer.next(val);
-        if (val === 100) {
+        if (val === this.salineReturn) {
           observer.unsubscribe();
         }
       }, 50);
-
       return () => {
         clearInterval(interval);
       };
     });
   }
+
+  subscribeData() {
+    this.emulateCollectionValue().subscribe((value: number) => this.currentValue = value);
+    this.emulateReturnValue().subscribe((value: number) => this.currentValue = value);
+  }
+
+  emulateCollectionValue() {
+    return new Observable(subscriber => {
+      let increment = 0;
+      var timeOut = setInterval(() => {
+        subscriber.next(this.collectionVal[increment]);
+        increment++;
+        if(increment === this.collectionVal.length) {
+          clearInterval(timeOut);
+        }
+      }, 1000);
+    });
+  }
+
+  emulateReturnValue() {
+    return new Observable(subscriber => {
+      let increment = 0;
+      var timeOut = setInterval(() => {
+        subscriber.next(this.returnVal[increment]);
+        increment++;
+        if(increment === this.returnVal.length) {
+          clearInterval(timeOut);
+        }
+      }, 1000);
+    });
+  }
 }
-
-// import { Component } from '@angular/core';
-// import { Calculator } from './calculator';
-
-// import { Person } from './person';
-
-// @Component({
-//   selector: 'app-root',
-//   templateUrl: './app.component.html',
-//   styleUrls: ['./app.component.css']
-// })
-// export class AppComponent {
-//   title = 'app';
-
-//   person: Person;
-
-//   constructor(){
-    
-//   }
-
-//   ngOnInit(){
-//     this.person = new Person(
-//       'Zulema',
-//       'Vicente',
-//       22,
-//       2,
-//       12
-//     );
-//     // let calculator = new Calculator();
-//     // let result = calculator.multiply(3,3);
-//     // console.log(result === 9);//'Test passed'
-//     // console.log(result !== 12);//'Test passed'
-//     // let result2 = calculator.divide(6,2);
-//     // console.log(result2 === 3);//'Test passed'
-//     // console.log(result2 !== 34);//'Test passed'
-//     // let result3 = calculator.divide(6,0);
-//     // console.log(result3 === null);//'Test passed'
-//   }
-// }

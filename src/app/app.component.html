@@ -16,7 +16,7 @@
 
 <!-- <app-progress [value2]="100"></app-progress> -->
 
-<h3>Dynamic</h3>
+<!-- <h3>Dynamic</h3>
 <app-dial 
 [currentPrime]="primeProgress | async" 
 [totalPrime]="30" 
@@ -24,8 +24,23 @@
 [totalCollection]="880" 
 [currentReturn]="returnProgress | async" 
 [totalReturn]="100"
-></app-dial>
+></app-dial> -->
 
+<app-dial
+  [currentPrime]="primeProgress | async"
+  [totalPrime]="30"
+  [currentCollection]="390"
+  [totalCollection]="880"
+  [currentReturn]="430"
+  [totalReturn]="880"
+  [currentSaline]="salineProgress | async"
+  [totalSaline]="100"
+  [status]="draw"
+  >
+
+</app-dial> 
+<!-- 
+<app-bar></app-bar> -->
 
 
 

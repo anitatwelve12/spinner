@@ -1,31 +1,57 @@
-<div class="progress">
-	<svg class="progress__svg" width="380" height="380" viewBox="0 0 120 120">
-        <circle 
-        class="prime-stroke-value-enable" 
-        [style.strokeDasharray]="primeCircumference" 
-        [style.strokeDashoffset]="primeDashoffset" 
-        cx="60" 
-        cy="60"
-        [attr.r]="primeRadius" 
-        stroke-width="10" />
-         
-         <circle 
-         class="collection-stroke-value-enable" 
-        [style.strokeDasharray]="collectionCircumference" 
-         [style.strokeDashoffset]="collectionDashoffset" 
-         cx="60" 
-         cy="60"
-         [attr.r]="collectionRadius" 
-         stroke-width="10"/>
+<div class="dent-position" (click)="someFunction()">
+  <a href="#" class="btn">
+      <div class="inner"></div>
+  </a>
+  <div class="progress">
+    <svg class="progress__svg" width="380" height="380" viewBox="0 0 120 120">
+          <circle
+          class=""
+          [style.strokeDasharray]="primeCircumference"
+          [style.strokeDashoffset]="primeDashoffset"
+          cx="60"
+          cy="60"
+          [attr.r]="primeRadius"
+          stroke-width="7"
+          [ngClass]="currentReturn >= totalReturn ? 'prime-rinsback-color-enable' : 'prime-stroke-value-enable'"
+          />
 
-         <!-- <circle class="return-stroke-value-enable" [style.strokeDasharray]="returnCircumference" [style.strokeDashoffset]="returnDashoffset" cx="60" cy="60"
-         [attr.r]="returnRadius" stroke-width="10"/> -->
-	</svg>
+          <circle
+          class=""
+          [style.strokeDasharray]="collectionCircumference"
+          [style.strokeDashoffset]="collectionDashoffset"
+          cx="60"
+          cy="60"
+          [attr.r]="collectionRadius"
+          stroke-width="7"
+          [ngClass]="currentReturn >= totalReturn ? 'collection-rinsback-color-enable' : 'collection-stroke-value-enable'"
+          />
 
-  <!-- <div class="progress__value-text">{{primeValue}}%</div> -->
+          <circle
+          class=""
+          [style.strokeDasharray]="returnCircumference"
+          [style.strokeDashoffset]="returnDashoffset"
+          cx="60"
+          cy="60"
+          [attr.r]="collectionRadius"
+          stroke-width="7"
+          [ngClass]="currentReturn >= totalReturn ? 'collection-rinsback-color-enable' : 'collection-stroke-value-enable'"
+          />
+
+           <circle
+           class=""
+           [style.strokeDasharray]="salineCircumference"
+           [style.strokeDashoffset]="salineDashoffset"
+           cx="60"
+           cy="60"
+           [attr.r]="salineRadius"
+           stroke-width="7"
+           [ngClass]="currentSaline >= totalSaline ? 'saline-rinsback-color-enable' : 'saline-stroke-value-enable'"
+           />
+    </svg>
+
+    <div class="collection-progress-text">{{currentCollection}}</div>
+    <div class="collection-static-progress-text">{{880}}</div>
+  </div>
 </div>
-<div>
-    <a href="#" class="btn">
-        <i class="fa fa-home"></i>
-    </a>
-</div>
+<div><span>current value:</span> {{currentReturn}}</div>
+<div><span>total value:</span> {{totalReturn}}</div>

@@ -1,0 +1,227 @@
+.main-bar-chart-box-size {
+
+    width: 789px;
+  
+    height: 365px;
+  
+    padding: 2px;
+  
+    border: 7px solid orangered;
+  
+    position: relative;
+  
+    background-color: whitesmoke;
+  
+    margin: 117px 21px;
+  
+  }
+
+  .bar-chart {
+
+    position: absolute;
+  
+    background-color: lightgray;
+  
+    width: 750px;
+  
+    height: 220px;
+  
+    padding: 2px;
+  
+    border: 7px solid lightgray;
+  
+    margin: 55px 0px 0px 10px;
+  
+    display: flex;
+  
+    flex-direction: row;
+  
+    justify-content: space-between;
+  
+  }
+  
+   
+  
+  .comm-height {
+  
+    height: 200px;
+  
+    width: 47.42px;
+  
+  }
+  
+  .sub-bar-chart-1 {
+  
+    border: 4px solid #56B040;  
+  
+    background-color: #76D74F;
+  
+  }
+  
+  .sub-bar-chart-2 {
+  
+    border: 4px solid #A3BE03;
+  
+    background-color: #DEFF00;
+  
+  }
+  
+  .sub-bar-chart-3 {
+  
+    border: 4px solid #E39500;
+  
+    background-color: #FDCB00;
+  
+  }
+  
+  .sub-bar-chart-4 {
+  
+    border: 4px solid #D65C00;
+  
+    background-color: #FB8527;
+  
+  }
+  
+  .sub-bar-chart-5 {
+  
+    border: 4px solid #9D3A21;
+  
+    background-color: #CB3F2D;
+  
+  }
+  
+  .sub-bar-chart-6 {
+  
+    border: 4px solid #009A44;
+  
+    background-color: #52BC71;
+  
+  }
+  
+  .sub-bar-chart-7 {
+  
+    border: 4px solid #56B040;
+  
+    background-color: #76D74F;
+  
+  }
+  
+  .sub-bar-chart-8 {
+  
+    border: 4px solid #A3BE03;
+  
+    background-color: #DEFF00;  
+  
+    background: linear-gradient(180deg, #CBDB00 0%, rgba(255,255,255,0) 100%);
+  
+  }
+  
+  .sub-bar-chart-9 {
+  
+    border: 4px solid #E39500;  
+  
+    background-color: #FDCB00;
+  
+  }
+  
+  .sub-bar-chart-10 {
+  
+    border: 4px solid #D65C00;  
+  
+    background-color: #FB8527;
+  
+  }
+  
+  .sub-bar-chart-11 {
+  
+    border: 4px solid #9D3A21;
+  
+    background-color: #CB3F2D;
+  
+  }
+  
+  .disabled {
+  
+    opacity: 0.1;
+  
+  }
+  
+  .enabled {
+  
+    opacity: 1;
+  
+  }
+  
+   
+  
+  .draw { 
+  
+    height: 92px; 
+  
+    width: 291.09px;  
+  
+    color: #1B1F21; 
+  
+    font-family: InterFace; 
+  
+    font-size: 52px;  
+  
+    font-weight: bold;  
+  
+    line-height: 70px;
+  
+    margin: 11px;
+  
+  }
+  
+   
+  
+  .saline-return {  
+  
+    height: 92px; 
+  
+    width: 332.23px;  
+  
+    color: #1B1F21; 
+  
+    font-family: InterFace; 
+  
+    font-size: 52px;  
+  
+    font-weight: bold;  
+  
+    line-height: 70px;
+  
+    margin: 0px 13px;
+  
+    text-align: right;  
+  
+    float: right;
+  
+  }
+  
+   
+  
+  .return { 
+  
+    height: 92px; 
+  
+    width: 332.23px;  
+  
+    color: #1B1F21; 
+  
+    font-family: InterFace; 
+  
+    font-size: 52px;  
+  
+    font-weight: bold;  
+  
+    line-height: 70px;
+  
+    margin: 0px 13px;
+  
+    text-align: right;
+  
+    float: right;
+  
+  }

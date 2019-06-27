@@ -1,33 +1,40 @@
 .progress {
-    position: relative;
+  position: absolute;
+  margin: 30px 25px;
   }
-  
-  .progress__value-text {
-    position: absolute;
-    top: 144px;
-    left: 139px;
-    font-size: 20px;
-  }
-  
+
   .progress__svg {
-    transform: rotate(-125deg);
+    transform: rotate(-120deg);
   }
-  
-  .progress__meter {
-    fill: none;
-  }
-  
-  .progress__meter {
-    stroke: #ccc;
-  }
-  
+
   .prime-stroke-value {
     transition: all 100ms;
     &-enable {
-      stroke: #4CAF50;
+      stroke: #0040FF;
       transform-origin:50% 50%;
       fill: none;
-      
+    }
+    &-disabled {
+      opacity: 0.2;
+    }
+  }
+
+  .prime-rinsback-color {
+    transition: all 100ms;
+    &-enable {
+      stroke: #04B45F;
+      transform-origin:50% 50%;
+      fill: #088A08;
+    }
+  }
+
+  .collection-rinsback-color {
+    transition: all 100ms;
+    &-enable {
+      stroke: #04B45F;
+      transform-origin:50% 50%;
+      transform: rotate(63deg);
+      fill: none;
     }
     &-disabled {
       opacity: 0.2;
@@ -37,7 +44,7 @@
   .collection-stroke-value {
     transition: all 100ms;
     &-enable {
-      stroke: red;
+      stroke: #58ACFA;
       transform-origin:50% 50%;
       transform: rotate(63deg);
       stroke-dashoffset: 5;
@@ -48,50 +55,216 @@
     }
   }
 
-  .return-stroke-value {
+
+
+  .return-rinsback-color {
     transition: all 100ms;
     &-enable {
-      stroke: #4CAF50;
+      stroke: #04B45F;
+      transform-origin:50% 50%;
+      transform: rotate(63deg);
       fill: none;
-      
     }
     &-disabled {
       opacity: 0.2;
     }
   }
 
-  .btn{/*dent around button*/
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
-    color: rgba(3, 169, 244, 0.54);
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    text-align: center;
-    background: #f7f7f7;
-    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.08);
-}
-.btn .fa {/*Button itself*/
-    position: absolute;
-    content: '';
-    width: 80px;
-    height: 80px;
-    line-height: 80px;
-    vertical-align: middle; 
-    left: 10px;
-    top: 9px;
-    border-radius: 50%;
-    font-size: 40px;
-    background-image: -webkit-linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
-    background-image: linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
-    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
-    box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
-    border-bottom: solid 2px #b5b5b5;
+  .return-stroke-value {
+    transition: all 100ms;
+    &-enable {
+      stroke: #000000;
+      transform-origin:50% 50%;
+      transform: rotate(63deg);
+      stroke-dashoffset: 5;
+      fill: none;
+    }
+    &-disabled {
+      opacity: 0.2;
+    }
   }
-  
-.btn .fa:active{
-    background-image: -webkit-linear-gradient(#efefef 0%, #d6d6d6 100%);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
-    border-bottom: solid 2px #d8d8d8;
+
+
+  .saline-rinsback-color {
+    transition: all 100ms;
+    &-enable {
+      stroke: #04B45F;
+      transform-origin:50% 50%;
+      transform: rotate(30deg);
+      fill: #088A08;
+    }
+  }
+
+  .saline-stroke-value {
+    transition: all 100ms;
+    &-enable {
+      stroke: #01A9DB;
+      transform-origin:50% 50%;
+      transform: rotate(30deg);
+      fill: none;
+    }
+    &-disabled {
+      opacity: 0.2;
+    }
+  }
+
+// .dent-position{
+//   margin: -20px 0px 0px 50px;
+//   position: relative;
+// }
+
+// .dent-position .btn{/*dent around button*/
+//     display: inline-block;
+//     text-decoration: none;
+//     color: rgba(3, 169, 244, 0.54);
+//     width: 280px;
+//     height: 280px;
+//     border-radius: 50%;
+//     text-align: center;
+//     background: #f7f7f7;
+//     background-image: linear-gradient(#fffefe 0%, #faf4f4 100%);
+//     box-shadow: inset 0 0 3px rgb(190, 189, 189);
+// }
+
+// .btn .inner {/*Button itself*/
+//     display: inline-block;
+//     content: '';
+//     width: 230px;
+//     height: 230px;
+//     line-height: 80px;
+//     vertical-align: middle;
+//     left: 10px;
+//     top: 9px;
+//     border-radius: 50%;
+//     font-size: 40px;
+//     margin: 25px 25px;
+//     background-image: -webkit-linear-gradient(#fdf9f9 0%, #fdfbfb 100%);
+//     background-image: linear-gradient(#fffefe 0%, #d6d6d6 100%);
+//     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+//     box-shadow: inset 0 2px 0 rgba(248, 241, 241, 0.904), 0 2px 2px rgba(202, 200, 200, 0.19);
+//     border-bottom: solid 2px #b5b5b5;
+//   }
+
+// .btn .inner:active{
+//     display: inline-block;
+//     background-image: -webkit-linear-gradient(#857d7d 0%, #413d3d 100%);
+//     box-shadow: inset 0 1px 0 rgba(146, 78, 78, 0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+//     border-bottom: solid 2px #910404;
+// }
+
+.collection-progress-text {
+  position: absolute;
+  top: 148px;
+  left: 155px;
+  font-size: 45px;
+  color: #086A87
 }
+
+.collection-progress-text-color {
+  color: white;
+}
+
+.collection-static-progress-text {
+  position: absolute;
+  top: 196px;
+  left: 171px;
+  font-size: 22px;
+}
+
+// .progress {
+//     position: relative;
+//   }
+  
+//   .progress__value-text {
+//     position: absolute;
+//     top: 144px;
+//     left: 139px;
+//     font-size: 20px;
+//   }
+  
+//   .progress__svg {
+//     transform: rotate(-125deg);
+//   }
+  
+//   .progress__meter {
+//     fill: none;
+//   }
+  
+//   .progress__meter {
+//     stroke: #ccc;
+//   }
+  
+//   .prime-stroke-value {
+//     transition: all 100ms;
+//     &-enable {
+//       stroke: #4CAF50;
+//       transform-origin:50% 50%;
+//       fill: none;
+      
+//     }
+//     &-disabled {
+//       opacity: 0.2;
+//     }
+//   }
+
+//   .collection-stroke-value {
+//     transition: all 100ms;
+//     &-enable {
+//       stroke: red;
+//       transform-origin:50% 50%;
+//       transform: rotate(63deg);
+//       stroke-dashoffset: 5;
+//       fill: none;
+//     }
+//     &-disabled {
+//       opacity: 0.2;
+//     }
+//   }
+
+//   .return-stroke-value {
+//     transition: all 100ms;
+//     &-enable {
+//       stroke: #4CAF50;
+//       fill: none;
+      
+//     }
+//     &-disabled {
+//       opacity: 0.2;
+//     }
+//   }
+
+//   .btn{/*dent around button*/
+//     display: inline-block;
+//     position: relative;
+//     text-decoration: none;
+//     color: rgba(3, 169, 244, 0.54);
+//     width: 100px;
+//     height: 100px;
+//     border-radius: 50%;
+//     text-align: center;
+//     background: #f7f7f7;
+//     box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.08);
+// }
+// .btn .fa {/*Button itself*/
+//     position: absolute;
+//     content: '';
+//     width: 80px;
+//     height: 80px;
+//     line-height: 80px;
+//     vertical-align: middle; 
+//     left: 10px;
+//     top: 9px;
+//     border-radius: 50%;
+//     font-size: 40px;
+//     background-image: -webkit-linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+//     background-image: linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+//     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+//     box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+//     border-bottom: solid 2px #b5b5b5;
+//   }
+  
+// .btn .fa:active{
+//     background-image: -webkit-linear-gradient(#efefef 0%, #d6d6d6 100%);
+//     box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+//     border-bottom: solid 2px #d8d8d8;
+// }
