@@ -85,26 +85,26 @@ export class DialComponent implements OnInit, OnChanges {
 
     private collectionProgress(currentCollection: number , currentReturn:number) {
         const collectionProgress = currentCollection / this.totalCollection;
-       if(this.status === this.drawType)
+    //    if(this.status === this.drawType)
        //console.log("type ==>", this.status);
         if(this.collectionDashoffset > this.collectioncutoffvalue){
             if(this.currentCollection <=this.totalCollection){
                 this.collectionDashoffset = this.collectionCircumference * (1 - collectionProgress);
             }
-        }else{
-           const returnProgress = currentReturn / this.totalReturn;
-            if (this.currentReturn <= this.totalReturn) {
-                this.returnDashoffset = this.returnCircumference * (1 - returnProgress);
-            }
+        // }else{
+        //    const returnProgress = currentReturn / this.totalReturn;
+        //     if (this.currentReturn <= this.totalReturn) {
+        //         this.returnDashoffset = this.returnCircumference * (1 - returnProgress);
+        //     }
     }
     }
-    //   private returnProgress(currentReturn: number) {
-    //     const returnProgress = currentReturn / this.totalReturn;
+      private returnProgress(currentReturn: number) {
+        const returnProgress = currentReturn / this.totalReturn;
 
-    //     if (this.currentReturn <= this.totalReturn) {
-    //         this.returnDashoffset = this.returnCircumference * (1 - returnProgress);
-    //     }
-    //   }
+        if (this.currentReturn <= this.totalReturn) {
+            this.returnDashoffset = this.returnCircumference * (1 - returnProgress);
+        }
+      }
 
       private salineProgress(currentSaline: number) {
         const salineProgress = currentSaline / this.totalSaline;
